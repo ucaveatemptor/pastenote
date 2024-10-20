@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php require_once "blocks/header.php"?>
-    <form method="post" action="src/reg.php">
+    <form method="post" action="app/src/reg.php">
     <div class="contcenter">
         <p>Регистрация</p>
         <div>

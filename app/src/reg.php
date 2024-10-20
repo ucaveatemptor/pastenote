@@ -12,10 +12,10 @@
         exit;
      }
 
-    require_once '../env/hashkey.php';
+    require_once '../../env/hashkey.php';
     $password = md5($key.$password);
 
-    require_once '../sql/db.php';
+    require_once '../../sql/db.php';
     $sqlCheck = 'SELECT id FROM users WHERE name = ?';
     $queryCheck = $pdo->prepare($sqlCheck);
     $queryCheck->execute([$username]);

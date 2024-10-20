@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php require_once "blocks/header.php"?>
-    <form method="post" action="src/login.php">
+    <form method="post" action="app/src/login.php">
     <div class="contcenter2">
         <p>Log in</p>
         <div>

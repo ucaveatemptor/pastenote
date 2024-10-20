@@ -9,7 +9,7 @@
         echo "text length = 0 not acceptable<br>";
         exit;
     }
-    require_once '../sql/db.php';
+    require_once '../../sql/db.php';
     $user = $_COOKIE['showUsername'];
     $sqlUID = 'SELECT id FROM users WHERE name = ?';
     $queryUID = $pdo->prepare($sqlUID);
@@ -18,7 +18,6 @@
     $userId = $row[0];
 
     $date = date("Y-m-d");
-    require_once '../sql/db.php';
     $sql = 'INSERT INTO notes(userId, label, text, date) VALUES (?, ?, ?, ?)';
     $query = $pdo->prepare($sql);
     $query->execute([$userId,$label,$text,$date]);

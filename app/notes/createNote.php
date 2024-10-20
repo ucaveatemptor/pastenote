@@ -7,7 +7,7 @@
     <title>pastenote</title>
 </head>
 <body>
-    <?php require_once "../blocks/header.php"?>
+    <?php require_once "../../blocks/header.php"?>
     <form method="post" action="../src/createNote.php">
     <div>Sobriquet: <?=$_COOKIE['showUsername']?>.</div>
     <div>

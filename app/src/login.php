@@ -12,10 +12,10 @@
         exit;
     }
 
-    require_once '../env/hashkey.php';
+    require_once '../../env/hashkey.php';
     $password = md5($key.$password);
     
-    require_once '../sql/db.php';
+    require_once '../../sql/db.php';
     $sql = 'SELECT id FROM users WHERE name = ? AND password = ?';
     $query = $pdo->prepare($sql);
     $query->execute([$username, $password]);
@@ -24,6 +24,6 @@
         echo "User doesn't exist";
     }
     else {
-        setcookie('showUsername', $username, time() + 3600 * 24 * 30, "/");
+        setcookie('showUsername', $username, time() + 3600 * 24 * 30, "/app");
         header('Location: ../notes/notes.php');
     }

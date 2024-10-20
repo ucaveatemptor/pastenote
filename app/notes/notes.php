@@ -7,11 +7,11 @@
     <title>pastenote</title>
 </head>
 <body>
-    <?php require_once "../blocks/header.php"?>
+    <?php require_once "../../blocks/header.php"?>
     <div>Sobriquet: <?=$_COOKIE['showUsername']?>.</div>
     <button><a href="../notes/createNote.php">Create note</a></button>
     <?php
-        require_once '../sql/db.php';
+        require_once '../../sql/db.php';
         $user = $_COOKIE['showUsername'];
         $sqlUID = 'SELECT id FROM users WHERE name = ?';
         $queryUID = $pdo->prepare($sqlUID);
