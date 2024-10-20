@@ -1,0 +1,52 @@
+.greetings {
+    text-align: center;
+    font-size: 100px;
+    color: blueviolet;
+    margin-top: 20%;
+}
+
+.contcenter {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    position: relative;
+    text-align: center;
+    width: 300px;
+    background-color: bisque;
+}
+p {
+    font-size: 40px;
+    color:darkslategray;
+}
+.date {
+    color:antiquewhite;
+}
+.note {
+    border: solid;
+    border-color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-width: 2px;
+}
+.contcenter2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    position: relative;
+    text-align: center;
+    width: 300px;
+    background-color:aquamarine;
+}
+
+.redtext {
+    color: red;
+}
+
+#textboxid{
+    height:200px;
+    font-size:14pt;
+}
+
+#signin textarea {
+    resize: none;
+}
