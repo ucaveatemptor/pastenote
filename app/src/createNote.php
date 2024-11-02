@@ -10,7 +10,7 @@
         echo "text length = 0 not acceptable<br>";
         exit;
     }
-    $note = new Note($label,$text,date("Y-m-d"));
+    $note = new UserNote($label,$text,date("Y-m-d"));
     require_once '../../sql/db.php';
     $user = $_COOKIE['showUsername'];
     $sqlUID = 'SELECT id FROM users WHERE name = ?';

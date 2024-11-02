@@ -5,12 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pastenote</title>
-    <?php if ($_COOKIE['showUsername'] != "") {
-        ?>
-            <meta http-equiv="refresh" content="0;URL=/app/notes/notes.php"/>
-    <?php
-    ;
-    }?>
 </head>
 <body>
     <style type="text/css">
