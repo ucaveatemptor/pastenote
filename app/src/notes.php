@@ -17,5 +17,6 @@
             <p style>'. $note->label .'<br></p>
             <a>'. $note->text.'<br><br></a>
             <a class="redtext"> Дата создания: '. $note->date .'</a>
+            <a href=../src/deleteNote.php?id=' . $note->id .'>Удалить</a>
         </div>';
     }
