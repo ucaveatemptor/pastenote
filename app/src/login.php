@@ -21,7 +21,7 @@
     $query->execute([$username, $password]);
 
     if ($query->rowCount() == 0) {
-        echo "User doesn't exist";
+        echo "Wrong name or password";
     }
     else {
         setcookie('showUsername', $username, time() + 3600 * 24 * 30, "/app");
