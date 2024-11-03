@@ -73,8 +73,8 @@ header nav ul li a:hover::after {
 	width: 100%; /* Полная ширина при наведении */
 }
 
-header nav ul li.btn {
-	padding-left: 240px;
+.btn_login {
+	padding-left: 150px;
 }
 
 /* HERO */

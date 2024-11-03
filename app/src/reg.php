@@ -15,7 +15,7 @@
     $uh = new UserHandler();
 
     if ($uh->registration($username, $password)) {
-        header('Location: /login.php');
+        header('Location: ../../site/login.html');
     } else {
         echo 'Username already in use';
     }

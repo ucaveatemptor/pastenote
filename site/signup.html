@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign Up</title>
+		<link rel="stylesheet" href="main_reg.css" />
+	</head>
+
+	<body>
+		<form method="post" action="../app/src/reg.php">
+		<div class="wrapper">
+			<div class="container main">
+				<div class="row">
+					<div class="col-md-6 right">
+						<div class="input-box">
+							<header>sign up</header>
+							<div class="input-field">
+								<input
+									type="text"
+									name="username"
+									class="input"
+									id="email"
+									required=""
+									autocomplete="off"
+								/>
+								<label for="email">your name</label>
+							</div>
+							<div class="input-field">
+								<input type="password" name="password" class="input" id="pass" required="" />
+								<label for="pass">password</label>
+							</div>
+							<div class="input-field">
+								<input type="submit" class="submit" value="sign up" />
+							</div>
+							<div class="signin">
+								<span
+									>already have an account? <a href="login.html">log in here</a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
