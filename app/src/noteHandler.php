@@ -7,7 +7,7 @@
             $this->pdo = Database::getInstance();
         }
 
-        public function getNotesByUsername($username) : array {
+        public function getNotesByUsername($username): array {
             $userId = $this->getUserId($username);
             $query = $this->pdo->prepare('SELECT id, label, text, date FROM notes WHERE userId = ? ORDER BY id DESC');
             $query->execute([$userId]);

@@ -11,18 +11,11 @@
         echo "Password error";
         exit;
     }
+    require_once 'userHandler.php';
+    $uh = new UserHandler();
 
-    
-    require_once '../../sql/db.php';
-    require_once '../../env/hashkey.php';
-    $password = md5(KEY.$password);
-    $pdo = Database::getInstance();
-    $sql = 'SELECT id FROM users WHERE name = ? AND password = ?';
-    $query = $pdo->prepare($sql);
-    $query->execute([$username, $password]);
-
-    if ($query->rowCount() == 0) {
-        echo "Wrong name or password" . $password;
+    if (!$uh->login($username, $password)) {
+        echo "Wrong name or password";
     }
     else {
         setcookie('showUsername', $username, time() + 3600 * 24 * 30, "/app");

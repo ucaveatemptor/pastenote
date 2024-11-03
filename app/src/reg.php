@@ -11,17 +11,11 @@
         echo "Password error";
         exit;
      }
-
     require_once 'userHandler.php';
-    require_once '../../sql/db.php';
-    $pdo = Database::getInstance();
-    $sqlCheck = 'SELECT id FROM users WHERE name = ?';
-    $queryCheck = $pdo->prepare($sqlCheck);
-    $queryCheck->execute([$username]);
-    if ($queryCheck->rowCount() == 0) {
-        $uh = new UserHandler();
-        $uh->registration($username, $password);
-        // header('Location: /login.php');
+    $uh = new UserHandler();
+
+    if ($uh->registration($username, $password)) {
+        header('Location: /login.php');
     } else {
         echo 'Username already in use';
     }
