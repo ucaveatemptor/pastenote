@@ -12,18 +12,16 @@
         exit;
      }
 
-    require_once '../../env/hashkey.php';
-    $password = md5($key.$password);
-
+    require_once 'userHandler.php';
     require_once '../../sql/db.php';
+    $pdo = Database::getInstance();
     $sqlCheck = 'SELECT id FROM users WHERE name = ?';
     $queryCheck = $pdo->prepare($sqlCheck);
     $queryCheck->execute([$username]);
     if ($queryCheck->rowCount() == 0) {
-        $sql = 'INSERT INTO users(name, password) VALUES(?, ?)';
-        $query = $pdo->prepare($sql);
-        $query->execute([$username, $password]);
-        header('Location: /login.php');
+        $uh = new UserHandler();
+        $uh->registration($username, $password);
+        // header('Location: /login.php');
     } else {
         echo 'Username already in use';
     }

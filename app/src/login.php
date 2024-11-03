@@ -12,16 +12,17 @@
         exit;
     }
 
-    require_once '../../env/hashkey.php';
-    $password = md5($key.$password);
     
     require_once '../../sql/db.php';
+    require_once '../../env/hashkey.php';
+    $password = md5(KEY.$password);
+    $pdo = Database::getInstance();
     $sql = 'SELECT id FROM users WHERE name = ? AND password = ?';
     $query = $pdo->prepare($sql);
     $query->execute([$username, $password]);
 
     if ($query->rowCount() == 0) {
-        echo "Wrong name or password";
+        echo "Wrong name or password" . $password;
     }
     else {
         setcookie('showUsername', $username, time() + 3600 * 24 * 30, "/app");
