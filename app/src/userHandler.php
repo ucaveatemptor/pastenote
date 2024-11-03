@@ -14,7 +14,6 @@
 
             $password = md5(KEY.$password);
             try {
-                $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $query = $this->pdo->prepare('INSERT INTO users(name, password) VALUES(?, ?)');
                 $query->execute([$username, $password]);
                 return true;
