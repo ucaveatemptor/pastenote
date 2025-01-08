@@ -1,5 +1,5 @@
 <?php
-    require_once 'noteHandler.php';
+    require_once 'classes/noteHandler.php';
     $label = filter_var($_POST['label'], FILTER_SANITIZE_SPECIAL_CHARS);
     $text = filter_var($_POST['text'], FILTER_SANITIZE_SPECIAL_CHARS);
     if (strlen($label) == 0) {

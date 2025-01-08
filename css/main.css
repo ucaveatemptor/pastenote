@@ -19,6 +19,14 @@ a {
 	text-decoration: none;
 }
 
+.note {
+    border: solid;
+    border-color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-width: 2px;
+}
+
 img {
 	max-width: 100%;
 }

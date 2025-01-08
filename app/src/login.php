@@ -1,4 +1,5 @@
-<?php 
+<?php
+    require_once 'classes/userHandler.php';
     $username = filter_var($_POST['username'], FILTER_SANITIZE_SPECIAL_CHARS);
     $password = filter_var($_POST['password'], FILTER_SANITIZE_SPECIAL_CHARS);
 
@@ -11,7 +12,6 @@
         echo "Password error";
         exit;
     }
-    require_once 'userHandler.php';
     $uh = new UserHandler();
 
     if (!$uh->login($username, $password)) {
