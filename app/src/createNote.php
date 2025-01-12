@@ -10,7 +10,7 @@
         exit;
     }
     if (strlen($text) == 0) {
-        echo "text length = 0 not acceptable<br>";
+        echo "Text length = 0 not acceptable<br>";
         exit;
     } else if(strlen($text) > 30000) {
         echo "Max length of text: 30000, you have: " . strlen($text);
